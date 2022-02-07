@@ -4,10 +4,29 @@
  */
 package inventori.form;
 
+import Config.*;
+import com.sun.jdi.connect.spi.Connection;
+import java.sql.SQLException;
+import javax.swing.table.DefaultTableModel;
+import java.sql.*;
+
 public class form_iventori extends javax.swing.JPanel {
 
     public form_iventori() {
         initComponents();
+    }
+    
+    private void LoadData() {
+        DefaultTableModel model = new DefaultTableModel();
+        
+        try {
+            int no = 1;
+            String sql = "SELECT * FROM barang";
+            Connection conn = (Connection)Config.DBConnection.DBConfig();
+            Statement stmt = conn.createStatement();
+        } catch (SQLException e) {
+            System.out.println("Failed");
+        }
     }
 
     /**

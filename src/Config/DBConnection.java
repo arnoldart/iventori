@@ -6,7 +6,7 @@ public class DBConnection {
     
     private static Connection MYSQLConfig;
 
-    public static Connection DBConnection(String[] args) throws SQLException {
+    public static Connection DBConfig() throws SQLException {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             String url = "jdbc:mysql://localhost:3306/jedidta_iventori";
